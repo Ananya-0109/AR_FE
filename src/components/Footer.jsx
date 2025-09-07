@@ -41,7 +41,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center mb-6">
               <i className="fas fa-industry text-2xl text-amber-500 mr-3"></i>
-              <h3 className="text-xl font-bold">Industrial Fabrication Co.</h3>
+              <h3 className="text-xl font-bold">AR Industries</h3>
             </div>
             <p className="text-gray-300 mb-6">
               Leading manufacturer specializing in precision metal fabrication, 
@@ -98,9 +98,15 @@ const Footer = () => {
               <div className="flex items-start">
                 <i className="fas fa-map-marker-alt text-amber-500 mr-3 mt-1"></i>
                 <span>
-                  123 Industrial Boulevard<br />
-                  Manufacturing City, MC 12345<br />
-                  United States
+                  Plot no 125-C
+KIADB Industrial Area,2nd Phase
+<br />
+                  Kudumalakunte Village
+Gauribidanur(Tk)
+<br />
+                 Chikkaballapur (Dist)
+Karnataka--561208
+
                 </span>
               </div>
               <div className="flex items-center">
@@ -109,7 +115,7 @@ const Footer = () => {
                   href="tel:+1-555-123-4567" 
                   className="hover:text-amber-500 transition duration-200"
                 >
-                  +1 (555) 123-4567
+                  9611103554
                 </a>
               </div>
               <div className="flex items-center">
@@ -118,7 +124,9 @@ const Footer = () => {
                   href="mailto:info@industrialfab.com" 
                   className="hover:text-amber-500 transition duration-200"
                 >
-                  info@industrialfab.com
+                  arindustries2153@gmail.com
+
+
                 </a>
               </div>
               <div className="flex items-center">

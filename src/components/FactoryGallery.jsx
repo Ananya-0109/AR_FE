@@ -68,8 +68,8 @@ const FactoryGallery = () => {
         <div className="container mx-auto px-4 flex flex-col items-center text-center">
           {/* Heading + Paragraph */}
           <div className="mb-16">
-            <h2 className="text-5xl font-bold mb-6 !text-blue-900">Factory Gallery</h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto py-6">
+            <p className="text-4xl font-bold mb-6 !text-blue-900">Factory Gallery</p>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto py-2">
               Take a virtual tour of our state-of-the-art manufacturing facility and see where precision meets innovation.
             </p>
           </div>

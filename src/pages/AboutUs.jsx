@@ -55,11 +55,10 @@ const AboutUs = () => {
              <p className="text-4xl font-extrabold mb-6 !text-blue-900">OUR STORY</p>
 
               <p className="text-xl text-gray-800 mb-4 text-justify leading-relaxed py-6">
-                Founded in 1990 as a small fabrication workshop, Industrial
-                Fabrication Co. has grown into a leading manufacturer serving
-                diverse industries across the globe. Our journey began with a
-                simple vision: to deliver exceptional quality through innovative
-                manufacturing techniques.
+               A R industries is part of company run by industrialist & entrepreneur Mr.Umesh Patil who has interest in construction & now in  fabrication industry
+A R industries is located in KIADB industrial area in Gauribidanur adjacent to National Highway
+It has close proximity to many industries, construction equipment companies &  peripheral ring road
+
               </p>
               <p className="text-xl text-gray-800 mb-6 text-justify leading-relaxed">
                 Today, we operate state-of-the-art facilities equipped with
@@ -67,6 +66,7 @@ const AboutUs = () => {
                 overhead cranes, automated welding stations, and advanced paint
                 booths.
               </p>
+              <p></p>
               <div className="grid grid-cols-2 gap-4">
   <div className="text-center p-4 bg-gray-100 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer">
     <i className="fas fa-award text-3xl text-blue-600 mb-2"></i>

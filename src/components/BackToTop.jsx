@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { FaArrowUp } from 'react-icons/fa';
 
 const BackToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -32,7 +33,7 @@ const BackToTop = () => {
         className="bg-blue-600 hover:bg-blue-700 text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
         aria-label="Back to top"
       >
-        <i className="fas fa-chevron-up text-xl"></i>
+        <FaArrowUp className="text-xl" />
       </button>
     </div>
   );

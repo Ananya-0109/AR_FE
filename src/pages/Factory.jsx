@@ -12,8 +12,8 @@ const Factory = () => {
      {/* Header Section */}
 <section className="py-20 bg-gradient-to-r from-teal-900 to-slate-800 text-white flex flex-col items-center justify-center text-center">
   <div className="container mx-auto px-4 flex flex-col items-center">
-    <h1 className="text-5xl font-bold mb-6 py-7">Factory & Capabilities</h1>
-    <p className="text-xl max-w-3xl mx-auto">
+    <p className="text-5xl font-extrabold mb-6 py-7">Factory & Capabilities</p>
+    <p className="text-xl max-w-3xl mx-https://github.com/Ananya-0109/AR_FEauto">
       Our state-of-the-art manufacturing facility spans 100,000 square feet and houses cutting-edge equipment operated by skilled professionals.
     </p>
   </div>

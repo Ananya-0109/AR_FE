@@ -75,8 +75,8 @@ const EquipmentsSection = () => {
       <div className="container mx-auto px-4">
         {/* Section Heading */}
         <div className="text-center mb-16 flex flex-col items-center">
-          <h2 className="text-4xl font-bold !text-blue-900 mb-6">Our Equipments</h2>
-          <p className="text-lg text-gray-800 max-w-3xl mx-auto text-center py-6">
+          <p className="text-4xl font-bold !text-blue-900 mb-6">Our Equipments</p>
+          <p className="text-lg text-gray-800 max-w-3xl mx-auto text-center py-2">
             Our factory is equipped with cutting-edge machinery designed to handle 
             complex fabrication tasks with precision and efficiency.
           </p>

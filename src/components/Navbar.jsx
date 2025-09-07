@@ -64,14 +64,14 @@ const NAV_ITEMS = [
     ],
   },
   {
-    label: 'Contact Us',
-    to: '/contact',
+    label: 'Career',
+    to: '/career',
     dropdown: [
-      { label: 'Google Maps', to: '/contact#map' },
-      { label: 'WhatsApp', to: '/contact#whatsapp' },
-      { label: 'Email', to: '/contact#email' },
+      { label: 'Job Openings', to: '/career#openings' },
+      { label: 'Apply Now', to: '/career#apply' },
     ],
   },
+  
 ];
 
 const Navbar = () => {
@@ -83,15 +83,14 @@ const Navbar = () => {
   return (
     <nav className="fixed w-full top-0 z-50 bg-[#232f3e] text-white shadow-xl font-inter">
       <div className="container mx-auto px-8 flex justify-between items-center h-20">
-        {/* Logo and Company Name */}
+        {/* Logo */}
         <Link to="/" className="flex items-center space-x-3">
           <img src="/ar-logo.png" alt="AR Industries Logo" className="h-10" />
-          
         </Link>
 
         {/* Main Menu */}
         <div className="flex items-center space-x-12 text-base font-medium">
-          {NAV_ITEMS.slice(0, 6).map((item) => (
+          {NAV_ITEMS.map((item) => (
             <div
               key={item.label}
               className="relative"

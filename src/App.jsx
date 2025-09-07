@@ -14,6 +14,7 @@ import Factory from './pages/Factory';
 import Products from './pages/Products';
 import Clients from './pages/Clients';
 import Certifications from './pages/Certifications';
+import Career from "./pages/Career";
 import Contact from './pages/Contact';
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
             <Route path="/products" element={<Products />} />
             <Route path="/clients" element={<Clients />} />
             <Route path="/certifications" element={<Certifications />} />
+            <Route path="/career" element={<Career />} /> 
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
