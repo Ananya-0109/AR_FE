@@ -1,9 +1,25 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import ClientGrid from '../components/ClientGrid';
 import IndustryCards from '../components/IndustryCards';
 import TestimonialSlider from '../components/TestimonialSlider';
 
 const Clients = () => {
+  const location = useLocation();
+
+  // Scroll to section if there's a hash
+  useEffect(() => {
+    const hash = location.hash;
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        const yOffset = -80; // height of fixed navbar
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    }
+  }, [location]);
+
   return (
     <div className="min-h-screen pt-20">
       {/* Header Section */}
@@ -17,7 +33,7 @@ const Clients = () => {
       </section>
 
       {/* Industries Served */}
-      <section className="py-20 bg-white">
+      <section id="industries" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="container mx-auto px-4 flex flex-col items-center text-center">
             <p className="text-4xl text-blue-900 font-bold mb-6">Industries We Serve</p>
@@ -30,7 +46,7 @@ const Clients = () => {
       </section>
 
       {/* Client Logos */}
-      <section className="py-20 bg-gray-50">
+      <section id="clients" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 py-5">
           <div className="container mx-auto px-4 flex flex-col items-center text-center">
             <p className="text-4xl text-blue-900 font-bold mb-6">Trusted by Industry Leaders</p>
@@ -53,6 +69,7 @@ const Clients = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Example Story Cards */}
             <div className="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition duration-300">
               <div className="mb-4">
                 <i className="fas fa-building text-3xl text-blue-600 mb-3"></i>
@@ -99,7 +116,7 @@ const Clients = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-gray-100">
+      <section id="testimonials" className="py-20 bg-gray-100">
         <div className="container mx-auto px-4">
           <div className="container mx-auto px-4 flex flex-col items-center text-center">
             <p className="text-4xl text-blue-900 font-bold mb-6">What Our Clients Say</p>
@@ -110,10 +127,6 @@ const Clients = () => {
           <TestimonialSlider />
         </div>
       </section>
-
-      
-      {/* CTA Section */}
-      
     </div>
   );
 };

@@ -45,7 +45,7 @@ const Factory = () => {
       </section>
 
       {/* Factory Gallery */}
-      <FactoryGallery />
+    
       <EquipmentsSection />
 
       {/* Equipment Section */}
