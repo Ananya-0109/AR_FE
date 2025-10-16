@@ -6,7 +6,6 @@ const NAV_ITEMS = [
   {
     label: "Home",
     to: "/",
-   
   },
   {
     label: "About Us",
@@ -56,7 +55,10 @@ const NAV_ITEMS = [
     label: "Career",
     to: "/career",
     dropdown: [
-      { label: "Job Openings", to: "/career#openings" },
+      
+      { label: "Work Culture", to: "/career#work-culture" },
+      
+      { label: " Job Openings", to: "/career#openings" }, // <-- UPDATED THIS LINE
       { label: "Apply Now", to: "/career#application-form" },
     ],
   },
@@ -74,7 +76,8 @@ const Navbar = () => {
       const element = document.querySelector(hash);
       if (element) {
         const yOffset = -80; // adjust based on navbar height
-        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        const y =
+          element.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: "smooth" });
       }
     }
