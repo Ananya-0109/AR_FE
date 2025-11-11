@@ -207,72 +207,89 @@ const App = () => {
     <div className="min-h-screen pt-0 bg-gray-50 flex flex-col font-sans">
       
       {/* Header Section: Catchy and Dynamic */}
-      <section className="relative py-40 flex flex-col items-center justify-center bg-gray-900 text-white text-center px-6 overflow-hidden">
-        {/* Background Overlay for effect */}
-        <div className="absolute inset-0 bg-cover bg-center opacity-10" style={{ backgroundImage: "url('https://placehold.co/1920x600/1e3a8a/ffffff?text=Tech+Innovation+Background')" }}></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-teal-900 to-indigo-900 opacity-90"></div>
-        
-       <div className="container mx-auto px-4 relative z-10">
-  <p className="text-sm font-semibold tracking-widest uppercase text-teal-400 mb-4 animate-fadeInUp text-center">
-    The Future of Mobility & Tech
-  </p>
+<section className="relative py-40 flex flex-col items-center justify-center bg-gradient-to-r from-teal-900 to-slate-800 text-white text-center px-6 overflow-hidden">
+  {/* Subtle dark overlay */}
+  <div className="absolute inset-0 bg-black/20"></div>
 
-  <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold mb-8 leading-tight text-center">
-    Careers at <span className="text-teal-400">AR Industries</span>
-  </h1>
+  <div className="container mx-auto px-4 relative z-10">
+    {/* <p className="text-sm font-semibold tracking-widest uppercase text-teal-400 mb-4 animate-fadeInUp text-center">
+      The Future of Mobility & Tech
+    </p> */}
 
-  <div className="flex justify-center">
-    <p className="text-base sm:text-lg md:text-xl max-w-md sm:max-w-2xl md:max-w-3xl text-gray-200 mb-10 font-light text-justify">
-      We are building a legacy of innovation. Join our team of dedicated problem-solvers and pioneers, where your work will have a tangible impact on the world.
-    </p>
+    {/* FIXED FONT SIZE BELOW */}
+    <h1
+  className="font-black tracking-tight mb-8 leading-tight text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-teal-400 to-emerald-500 drop-shadow-lg"
+  style={{ fontSize: '3rem', lineHeight: '1.1', fontWeight: 900 }}
+>
+  Careers at <span className="text-cyan-300 drop-shadow-md">AR Industries</span>
+</h1>
+
+    <div className="flex justify-center">
+      <p className="text-lg text-gray-200 leading-relaxed px-10 text-justify">
+        We are building a legacy of innovation. Join our team of dedicated
+        problem-solvers and pioneers, where your work will have a tangible impact
+        on the world.
+      </p>
+    </div>
+
+    <div className="flex justify-center">
+      <button
+        onClick={(e) => handleSmoothScroll(e, '#open-positions')}
+        className="inline-flex items-center bg-gradient-to-r from-slate-600 to-teal-400 text-white px-8 py-3 rounded-full font-bold text-lg shadow-xl 
+                   hover:from-teal-400 hover:to-emerald-300 hover:text-gray-50 transition-all transform hover:scale-105 duration-300 group"
+      >
+        Explore Openings
+        <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+      </button>
+    </div>
   </div>
-
- <div className="flex justify-center">
-  <p
-    href="#open-positions"
-    onClick={(e) => handleSmoothScroll(e, '#open-positions')}
-    className="inline-flex items-center bg-teal-500 text-white px-8 py-3 rounded-full font-bold text-lg shadow-xl 
-               hover:bg-teal-400 hover:text-gray-50 transition-colors transform hover:scale-105 duration-300 group"
-  >
-    Explore Openings
-    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"/>
-  </p>
-</div>
-
-</div>
-
-      </section>
+</section>
 
       {/* --- Work Culture Section --- (New and Dynamic) */}
       <section id="work-culture" className="py-24 bg-white">
         <div className="container mx-auto px-4">
          <div className="text-center mb-16">
   <p className="text-5xl font-extrabold text-gray-900 mb-4">
-    Our <span className="text-indigo-600">Culture</span>. Your Growth.
+    Our <span className="text-blue-900">Culture</span>. Your Growth.
   </p>
 
   <div className="flex justify-center">
-    <p className="text-xl text-gray-600 max-w-4xl text-justify leading-relaxed">
+    <p className="text-xl text-gray-800 max-w-3xl text-center">
       We foster an environment of trust, empowerment, and bold experimentation, believing that the best work happens when people feel valued and challenged.
     </p>
   </div>
 </div>
 
           {/* Adjusted grid layout for 6 detailed points */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {CULTURE_POINTS.map((point, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 p-8 rounded-xl shadow-lg border-t-4 border-indigo-500 hover:shadow-2xl transition duration-300 transform hover:-translate-y-1"
-              >
-                <div className="text-indigo-600 mb-4">
-                  {getIcon(point.icon, { className: 'w-10 h-10' })}
-                </div>
-                <p className="text-xl font-bold text-gray-900 mb-3">{point.title}</p>
-                <p className="text-gray-600 text-base">{point.description}</p>
-              </div>
-            ))}
-          </div>
+         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+  {CULTURE_POINTS.map((point, index) => (
+    <div
+      key={index}
+      className="bg-white p-8 rounded-xl shadow-lg transition duration-300 transform hover:scale-105 cursor-pointer group"
+    >
+      <div className="text-center">
+        {/* Icon Circle */}
+        <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6 transition-all duration-300 group-hover:bg-blue-700">
+          {getIcon(point.icon, {
+            className:
+              "w-8 h-8 text-teal-800 transition-all duration-300 group-hover:text-white",
+          })}
+        </div>
+
+        {/* Title */}
+        <p className="text-xl font-bold mb-4 text-gray-800 transition-all duration-300 group-hover:text-blue-900">
+          {point.title}
+        </p>
+
+        {/* Description */}
+        <p className="text-gray-700 text-base leading-relaxed">
+          {point.description}
+        </p>
+      </div>
+    </div>
+  ))}
+</div>
+
         </div>
       </section>
       {/* --- END Work Culture Section --- */}
@@ -281,8 +298,8 @@ const App = () => {
       <section id="open-positions" className="py-24 bg-gray-100">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <p className="text-4xl font-extrabold text-indigo-900 mb-3">Current Open Positions</p>
-            <p className="text-lg text-gray-600">
+            <p className="text-4xl font-extrabold text-black mb-3">Current Open Positions</p>
+            <p className="text-lg text-gray-700">
               Find the role that matches your passion and skills. Click a card to view details.
             </p>
           </div>
@@ -295,7 +312,7 @@ const App = () => {
                 onClick={() => openJobModal(job)}
               >
                 <div>
-                  <p className="text-sm font-semibold uppercase text-teal-600 mb-1">{job.department}</p>
+                  <p className="text-sm font-semibold uppercase text-blue-700 mb-1">{job.department}</p>
                   <p className="text-2xl font-bold text-gray-800 mb-2 leading-snug">{job.title}</p>
                 </div>
                 <div>
@@ -324,9 +341,9 @@ const App = () => {
             >
               &times;
             </button>
-            <h2 className="text-3xl font-extrabold text-indigo-900 mb-2">
+            <p className="text-3xl font-extrabold text-indigo-900 mb-2">
               {selectedJob.title}
-            </h2>
+            </p>
             <div className="text-sm text-teal-600 font-semibold mb-6 space-x-4">
                 <span>{selectedJob.department}</span>
                 <span>|</span>
@@ -334,7 +351,7 @@ const App = () => {
             </div>
 
             <p className='text-xl font-bold text-gray-800 mb-2'>Description</p>
-            <p className="text-gray-700 mb-6 border-l-4 border-teal-500 pl-3">{selectedJob.description}</p>
+            <p className="text-gray-700 mb-6 border-l-4 border-blue-500 pl-3">{selectedJob.description}</p>
             
             <p className='text-xl font-bold text-gray-800 mb-2'>Requirements</p>
             <ul className="list-disc list-outside text-gray-600 space-y-2 ml-5 mb-8">
@@ -348,7 +365,7 @@ const App = () => {
                 closeJobModal(); // Close modal upon clicking apply
                 handleSmoothScroll(e, '#application-form');
               }}
-              className="w-full text-center inline-block bg-indigo-600 text-white px-6 py-3 rounded-full font-bold hover:bg-indigo-700 transition transform hover:scale-[1.01] shadow-lg"
+              className="w-full text-center inline-block bg-blue-600 text-white px-6 py-3 rounded-full font-bold hover:bg-blue-800 transition transform hover:scale-[1.01] shadow-lg"
             >
               Apply for this Role
             </a>
@@ -359,7 +376,7 @@ const App = () => {
       {/* Application Form */}
       <section
         id="application-form"
-        className="py-24 bg-indigo-900 flex justify-center items-center"
+        className="py-24  flex justify-center items-center"
       >
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="bg-white shadow-2xl p-8 md:p-12 rounded-2xl">
@@ -467,14 +484,15 @@ const App = () => {
                   Why should we hire you?
                 </label>
                 <textarea
-                  id="statement"
-                  name="statement"
-                  value={applicationFormData.statement}
-                  onChange={handleFormChange}
-                  placeholder="Write a short statement about your vision, experience, and what makes you a great fit."
-                  rows="4"
-                  className="w-full border border-gray-300 px-4 py-3 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors"
-                ></textarea>
+  id="statement"
+  name="statement"
+  value={applicationFormData.statement}
+  onChange={handleFormChange}
+  placeholder="Write a short statement about your vision, experience, and what makes you a great fit."
+  rows="4"
+  className="w-full border border-gray-300 px-4 py-3 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors text-gray-900"
+></textarea>
+
               </div>
 
               {/* Upload Resume */}
@@ -486,7 +504,7 @@ const App = () => {
                   id="resume"
                   name="resume"
                   type="file"
-                  className="w-full border border-gray-300 px-4 py-3 rounded-lg cursor-pointer bg-gray-50 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-teal-500 file:text-white hover:file:bg-teal-600 transition-colors"
+                  className="w-full border border-gray-300 px-4 py-3 rounded-lg cursor-pointer bg-gray-50 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-blue-700 file:text- hover:file:bg-blue-800 transition-colors"
                   accept=".pdf,.doc,.docx"
                   required
                 />
@@ -510,9 +528,9 @@ const App = () => {
       </section>
 
       {/* Footer (Simple Placeholder) */}
-      <footer className="bg-gray-900 text-center py-6 text-gray-400 text-sm">
+      {/* <footer className="bg-gray-900 text-center py-6 text-gray-400 text-sm">
         &copy; 2025 AR Industries. All rights reserved.
-      </footer>
+      </footer> */}
     </div>
   );
 };

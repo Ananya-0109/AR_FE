@@ -5,9 +5,9 @@ const StatsCounter = () => {
   const sectionRef = useRef(null);
 
   const stats = [
-    { number: 30, label: 'Years Experience', suffix: '+' },
-    { number: 500, label: 'Projects Completed', suffix: '+' },
-    { number: 50, label: 'Team Members', suffix: '+' },
+    { number: 3, label: 'Years Experience', suffix: '+' },
+    { number: 200, label: 'Orders Completed', suffix: '+' },
+    { number: 100, label: 'Team Members', suffix: '+' },
     { number: 24, label: 'Hour Support', suffix: '/7' }
   ];
 

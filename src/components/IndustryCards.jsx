@@ -64,7 +64,7 @@ const IndustryCards = () => {
             <div className="w-16 h-16 bg-blue-100 group-hover:bg-blue-200 rounded-full flex items-center justify-center mx-auto mb-4 transition-colors duration-300">
               <i className={`${industry.icon} text-2xl text-blue-600 group-hover:text-blue-700 transition-colors duration-300`}></i>
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-2">{industry.name}</h3>
+            <p className="text-xl font-bold text-gray-900 mb-2">{industry.name}</p>
             <p className="text-gray-600 text-sm leading-relaxed">{industry.description}</p>
           </div>
 
@@ -76,7 +76,7 @@ const IndustryCards = () => {
 
           {/* Specialties */}
           <div className="mb-6">
-            <h4 className="text-sm font-semibold text-gray-900 mb-3">Our Specialties:</h4>
+            <p className="text-sm font-semibold text-gray-900 mb-3">Our Specialties:</p>
             <div className="flex flex-wrap gap-2">
               {industry.specialties.map((specialty, index) => (
                 <span

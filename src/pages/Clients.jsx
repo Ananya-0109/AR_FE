@@ -25,7 +25,7 @@ const Clients = () => {
       {/* Header Section */}
       <section className="relative py-32 flex flex-col items-center justify-center bg-gradient-to-r from-teal-900 to-slate-800 text-white text-center px-6 overflow-hidden">
         <div className="container mx-auto px-4 flex flex-col items-center text-center">
-          <h1 className="text-5xl font-bold mb-6">Our Clients & Industries</h1>
+          <p className="text-5xl font-extrabold mb-6 py-7">Our Clients & Industries</p>
           <p className="text-xl max-w-3xl mx-auto">
             We proudly serve leading companies across diverse industries, delivering quality solutions that drive success.
           </p>
@@ -36,7 +36,7 @@ const Clients = () => {
       <section id="industries" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="container mx-auto px-4 flex flex-col items-center text-center">
-            <p className="text-4xl text-blue-900 font-bold mb-6">Industries We Serve</p>
+            <p className="text-4xl text-blue-900 font-bold mb-6">Clients We Serve</p>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto py-5">
               Our expertise spans multiple sectors, providing specialized solutions for each industry's unique requirements.
             </p>

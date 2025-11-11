@@ -4,10 +4,10 @@ const Certifications = () => {
   return (
     <div className="min-h-screen pt-20 bg-gray-50">
       {/* Header */}
-      <section className="relative py-32 flex flex-col items-center justify-center bg-gradient-to-r from-teal-900 to-slate-800 text-white text-center px-6 overflow-hidden">
+      <section className="relative py-40 flex flex-col items-center justify-center text-white text-center px-6 overflow-hidden bg-gradient-to-r from-teal-900 to-slate-800">
         <div className="container mx-auto px-4 flex flex-col items-center text-center">
-          <p className="text-5xl font-bold mb-4">Certifications</p>
-          <p className="text-lg max-w-3xl mx-auto">
+          <p className="text-5xl font-extrabold mb-6 py-7">Certifications</p>
+          <p className="text-lg text-gray-200 leading-relaxed px-10">
             Our certifications reflect our commitment to quality, safety, and
             compliance with international standards.
           </p>

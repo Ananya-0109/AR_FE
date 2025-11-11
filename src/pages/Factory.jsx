@@ -29,7 +29,7 @@ const Factory = () => {
               <div className="text-gray-600">Sq Ft Facility</div>
             </div>
             <div className="p-6">
-              <div className="text-4xl font-bold text-green-600 mb-2">50+</div>
+              <div className="text-4xl font-bold text-green-600 mb-2">100+</div>
               <div className="text-gray-600">Skilled Workers</div>
             </div>
             <div className="p-6">
@@ -76,7 +76,7 @@ const Factory = () => {
       <h2 className="text-3xl font-bold mb-6 !text-blue-900">
         Manufacturing Processes
       </h2>
-      <p className="text-xl text-gray-700 max-w-3xl text-center">
+      <p className="entetext-xl text-gray-700 max-w-3xl text-cr">
         From raw materials to finished products, our comprehensive manufacturing
         processes ensure quality at every step.
       </p>
@@ -177,70 +177,74 @@ const Factory = () => {
       </section>
 
       {/* Capabilities Overview */}
-      <section className="py-20 bg-gray-100">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16 flex flex-col items-center ">
-            <h2 className="text-4xl font-bold mb-6 !text-blue-900">Production Capabilities</h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Our facility is equipped to handle projects of all sizes, from prototype development to full-scale production runs.
-            </p>
+      {/* Capabilities Overview */}
+<section className="py-20 bg-gray-100">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-16 flex flex-col items-center">
+      <h2 className="text-4xl font-bold mb-6 !text-blue-900">
+        Production Capabilities
+      </h2>
+      <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+        Our facility is equipped to handle projects of all sizes, from prototype development to full-scale production runs.
+      </p>
+    </div>
+
+    <div className="grid md:grid-cols-2 gap-8">
+      {/* Dimensional Capabilities */}
+      <div className="bg-white p-8 rounded-lg shadow-lg">
+        <p className="text-2xl font-bold mb-4 text-blue-600 text-left">
+          Dimensional Capabilities
+        </p>
+
+        <div className="grid grid-cols-2 gap-y-3 text-sm text-left">
+          <div>
+            <p className="font-semibold text-gray-800">Maximum Length</p>
+            <p className="text-gray-700 text-justify">100 meters</p>
           </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-bold mb-6 flex items-center !text-blue-600">
-  <i className="fas fa-ruler-combined text-3xl !text-blue-800 mr-3"></i>
-  Dimensional Capabilities
-</h3>
-
-              <div className="grid grid-cols-2 gap-4 text-sm">
-                <div>
-                  <div className="font-semibold text-gray-800">Maximum Length</div>
-                  <div className="text-gray-600">40 feet</div>
-                </div>
-                <div>
-                  <div className="font-semibold text-gray-800">Maximum Width</div>
-                  <div className="text-gray-600">20 feet</div>
-                </div>
-                <div>
-                  <div className="font-semibold text-gray-800">Maximum Thickness</div>
-                  <div className="text-gray-600">6 inches</div>
-                </div>
-                <div>
-                  <div className="font-semibold text-gray-800">Weight Capacity</div>
-                  <div className="text-gray-600">50 tons</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white p-8 rounded-lg shadow-lg">
-             <h3 className="text-2xl font-bold mb-6 flex items-center !text-blue-600">
-  <i className="fas fa-chart-line text-3xl !text-blue-800 mr-3"></i>
-  Production Metrics
-</h3>
-
-              <div className="grid grid-cols-2 gap-4 text-sm">
-                <div>
-                  <div className="font-semibold text-gray-800">Daily Capacity</div>
-                  <div className="text-gray-600">500+ components</div>
-                </div>
-                <div>
-                  <div className="font-semibold text-gray-800">Lead Time</div>
-                  <div className="text-gray-600">2-4 weeks typical</div>
-                </div>
-                <div>
-                  <div className="font-semibold text-gray-800">Rush Orders</div>
-                  <div className="text-gray-600">24-48 hours</div>
-                </div>
-                <div>
-                  <div className="font-semibold text-gray-800">Quality Rate</div>
-                  <div className="text-gray-600">99.8% accuracy</div>
-                </div>
-              </div>
-            </div>
+          <div>
+            <p className="font-semibold text-gray-800">Maximum Width</p>
+            <p className="text-gray-700 text-justify">200 meters</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-800">Maximum Thickness</p>
+            <p className="text-gray-700 text-justify">40 meters</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-800">Weight Capacity</p>
+            <p className="text-gray-700 text-justify">350 tons</p>
           </div>
         </div>
-      </section>
+      </div>
+
+      {/* Production Metrics */}
+      <div className="bg-white p-8 rounded-lg shadow-lg">
+        <p className="text-2xl font-bold mb-4 text-blue-600 text-left">
+          Production Metrics
+        </p>
+
+        <div className="grid grid-cols-2 gap-y-3 text-sm text-left">
+          <div>
+            <p className="font-semibold text-gray-800">Daily Capacity</p>
+            <p className="text-gray-700 text-justify">100+ components</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-800">Lead Time</p>
+            <p className="text-gray-700 text-justify">2-4 weeks typical</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-800">Rush Orders</p>
+            <p className="text-gray-700 text-justify">Contact Us</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-800">Quality Rate</p>
+            <p className="text-gray-700 text-justify">Exceeds your expectations</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       
     </div>

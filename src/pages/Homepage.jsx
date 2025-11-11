@@ -31,8 +31,7 @@ const Homepage = () => {
         Why Choose Us?
       </p>
       <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed mt-4">
-        With over three decades of excellence, we deliver precision manufacturing 
-        solutions that drive your business forward.
+        We are growing dynamic organisation always ready to serve.
       </p>
     </div>
 
@@ -140,8 +139,7 @@ Canvas
               Explore Our Capabilities
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mt-4">
-              Discover our comprehensive range of manufacturing services and 
-              industry-leading expertise.
+             Feel the difference,expertise and on time delivery.
             </p>
           </div>
 
@@ -164,7 +162,7 @@ Canvas
                 <i className={`fas fa-boxes text-4xl text-${primaryColorDark} mb-4`}></i>
                 <h3 className="text-xl font-bold mb-2 !text-gray-800">Products & Components</h3>
                 <p className="text-gray-600 mb-4">
-                  Explore our extensive catalog of industrial components and custom products.
+                  Explore our capabilities of producing our industrial components and custom products.
                 </p>
                 <span className={`text-${primaryColorDark} font-semibold group-hover:translate-x-2 inline-block transition duration-300`}>
                   View Products <i className="fas fa-arrow-right ml-2"></i>
@@ -177,7 +175,7 @@ Canvas
                 <i className={`fas fa-certificate text-4xl text-${primaryColorDark} mb-4`}></i>
                 <h3 className="text-xl font-bold mb-2 !text-gray-800">Quality Certifications</h3>
                 <p className="text-gray-600 mb-4">
-                  View our industry certifications and quality management standards.
+                  View our industry certifications and quality manufacturing standards.
                 </p>
                 <span className={`text-${primaryColorDark} font-semibold group-hover:translate-x-2 inline-block transition duration-300`}>
                   View Certifications <i className="fas fa-arrow-right ml-2"></i>

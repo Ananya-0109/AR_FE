@@ -184,79 +184,79 @@ const Products = () => {
 
       {/* Technical Specifications */}
       <section className="py-20 bg-gray-100">
-        <div className="container mx-auto px-4 flex flex-col items-center text-center">
-          <div className="text-center mb-16">
-            <p className="text-3xl font-extrabold mb-6 text-black">
-              Technical Specifications
-            </p>
-            <p className="text-xl !text-gray-600 max-w-3xl mx-auto">
-              Our products are manufactured to meet or exceed industry standards
-              and specifications.
-            </p>
-          </div>
+  <div className="container mx-auto px-4 flex flex-col items-center text-center">
+    <div className="text-center mb-16">
+      <p className="text-3xl font-extrabold mb-6 text-black">
+        Technical Specifications
+      </p>
+      <p className="text-xl !text-gray-600 max-w-3xl mx-auto">
+        Our products are manufactured to meet customer expectations
+        and specifications.
+      </p>
+    </div>
 
-          <div className="grid md:grid-cols-2 text-blue-900 lg:grid-cols-3 gap-8 ">
-            {[
-              {
-                icon: "fas fa-ruler text-blue-600 ",
-                title: "Dimensional Accuracy",
-                items: [
-                  "Linear dimensions: ±0.005\"",
-                  "Angular dimensions: ±0.5°",
-                  "Surface finish: 32-125 RMS",
-                  "Flatness: 0.002\" per inch",
-                ],
-              },
-              {
-                icon: "fas fa-weight-hanging text-green-600",
-                title: "Material Properties",
-                items: [
-                  "Steel grades: A36, A572, A588",
-                  "Aluminum alloys: 6061-T6, 5052",
-                  "Stainless steel: 304, 316, 410",
-                  "Custom alloys available",
-                ],
-              },
-              {
-                icon: "fas fa-shield-alt text-amber-600",
-                title: "Testing & Certification",
-                items: [
-                  "Material test certificates",
-                  "Dimensional inspection reports",
-                  "Non-destructive testing",
-                  "Third-party verification",
-                ],
-              },
-            ].map((spec, idx) => (
-              <div
-                key={idx}
-                className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition"
-              >
-                <p className="text-xl font-bold mb-4 flex items-center">
-                  <i className={`${spec.icon} mr-3`}></i>
-                  {spec.title}
-                </p>
-                <ul className="space-y-2 text-gray-600">
-                  {spec.items.map((item, i) => (
-                    <li key={i}>• {item}</li>
-                  ))}
-                </ul>
-              </div>
+    <div className="grid md:grid-cols-2 text-blue-900 lg:grid-cols-3 gap-8">
+      {[
+        {
+          icon: "fas fa-ruler text-blue-600 ",
+          title: "Dimensional Accuracy",
+          items: [
+            'Linear dimensions: ±0.005"',
+            "Angular dimensions: ±0.5°",
+            "Surface finish: 32-125 RMS",
+            'Flatness: 0.002" per inch',
+          ],
+        },
+        {
+          icon: "fas fa-weight-hanging text-green-600",
+          title: "Material Properties",
+          items: [
+            "Steel grades: A36, A572, A588",
+            "Aluminum alloys: 6061-T6, 5052",
+            "Stainless steel: 304, 316, 410",
+            "Custom alloys available",
+          ],
+        },
+        {
+          icon: "fas fa-shield-alt text-amber-600",
+          title: "Testing & Certification",
+          items: [
+            "Material test certificates",
+            "Dimensional inspection reports",
+            "Non-destructive testing",
+            "Third-party verification",
+          ],
+        },
+      ].map((spec, idx) => (
+        <div
+          key={idx}
+          className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition"
+        >
+          <p className="text-xl font-bold mb-4 flex items-center">
+            <i className={`${spec.icon} mr-3`}></i>
+            {spec.title}
+          </p>
+          <ul className="space-y-2 text-gray-600 text-left text-justify pl-2">
+            {spec.items.map((item, i) => (
+              <li key={i}>• {item}</li>
             ))}
-          </div>
+          </ul>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* CTA Section */}
       <section className="relative py-24 bg-gradient-to-r from-gray-800 to-gray-900 text-white text-center">
         <div className="absolute inset-0 bg-[url('/assets/blueprint.png')] opacity-10"></div>
         <div className="container mx-auto px-4 relative flex flex-col items-center text-center">
           <h2 className="text-4xl font-extrabold mb-6">
-            Need a Custom Solution?
+            Need Fabrication Solution?
           </h2>
           <p className="text-xl mb-8 max-w-2xl text-center py-4">
-            Can't find what you're looking for? Our engineering team can design
-            and manufacture components tailored to your needs.
+            Can't find what you're looking for? Our engineering team can  manufacture components tailored to your needs.
           </p>
           <div className="flex gap-6 justify-center mt-6">
             <a
@@ -273,13 +273,13 @@ const Products = () => {
               <i className="fas fa-phone mr-2"></i>
               Call Engineering
             </a>
-            <a
+            {/* <a
               href="/brochure.pdf"
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:bg-white hover:text-gray-900"
             >
               <i className="fas fa-file-pdf mr-2"></i>
               Download Brochure
-            </a>
+            </a> */}
           </div>
         </div>
       </section>

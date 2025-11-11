@@ -19,9 +19,7 @@ const AboutUs = () => {
             About Us
           </p>
           <p className="text-lg text-gray-200 leading-relaxed px-10">
-            With over three decades of excellence in metal fabrication, we've
-            established ourselves as a premier manufacturer specializing in
-            precision industrial components and custom solutions.
+            With a team of professionals we have excelled in fabrication in short span of time and established ourselves as we go for special fabrication components and custom solutions.
           </p>
         </motion.div>
       </section>
@@ -67,20 +65,7 @@ const AboutUs = () => {
                 advanced paint booths.
               </p>
 
-              <div className="grid grid-cols-2 gap-4">
-                <div className="text-center p-4 bg-gray-100 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer">
-                  <i className="fas fa-award text-3xl text-blue-600 mb-2"></i>
-                  <div className="font-bold text-gray-800 hover:text-teal-600">
-                    ISO Certified
-                  </div>
-                </div>
-                <div className="text-center p-4 bg-gray-100 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer">
-                  <i className="fas fa-shield-alt text-3xl text-blue-600 mb-2"></i>
-                  <div className="font-bold text-gray-800 hover:text-teal-600">
-                    Safety First
-                  </div>
-                </div>
-              </div>
+             
             </motion.div>
           </div>
         </div>
@@ -88,15 +73,14 @@ const AboutUs = () => {
 
       {/* Vision & Mission */}
       <section id="vision" className="py-20 bg-gray-50">
-        <div className="container mx-auto px-6 text-center mb-16">
-          <p className="text-4xl font-black mb-6 text-blue-900 py-5">
-            Our Vision & Mission
-          </p>
-          <p className="text-lg md:text-xl text-black leading-relaxed">
-            Driving innovation and excellence in industrial manufacturing
-            through commitment to quality and customer satisfaction.
-          </p>
-        </div>
+  <div className="container mx-auto px-6 text-center mb-16 flex flex-col items-center">
+    <h2 className="!text-4xl !font-bold mb-6 !text-blue-900">
+      Our Vision & Mission
+    </h2>
+    <p className="text-xl text-black max-w-3xl text-center">
+      Commited to quality, delivery and custom satisfaction.
+    </p>
+  </div>
 
         <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12">
           <motion.div

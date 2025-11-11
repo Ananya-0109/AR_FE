@@ -55,10 +55,8 @@ const NAV_ITEMS = [
     label: "Career",
     to: "/career",
     dropdown: [
-      
       { label: "Work Culture", to: "/career#work-culture" },
-      
-      { label: " Job Openings", to: "/career#openings" }, // <-- UPDATED THIS LINE
+      { label: "Job Openings", to: "/career#openings" },
       { label: "Apply Now", to: "/career#application-form" },
     ],
   },
@@ -83,19 +81,10 @@ const Navbar = () => {
     }
   }, [location]);
 
-  const handleDropdownClick = (label) => {
+  const handleDropdownClick = (label, to) => {
     setOpenDropdown((prev) => (prev === label ? null : label));
+    navigate(to);
   };
-
-  useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (!e.target.closest(".navbar-item")) {
-        setOpenDropdown(null);
-      }
-    };
-    document.addEventListener("click", handleClickOutside);
-    return () => document.removeEventListener("click", handleClickOutside);
-  }, []);
 
   return (
     <nav className="fixed w-full top-0 z-50 bg-[#232f3e] text-white shadow-xl font-inter">
@@ -110,10 +99,7 @@ const Navbar = () => {
           {NAV_ITEMS.map((item) => (
             <div key={item.label} className="relative navbar-item">
               <button
-                onClick={() => {
-                  handleDropdownClick(item.label);
-                  navigate(item.to);
-                }}
+                onClick={() => handleDropdownClick(item.label, item.to)}
                 className="flex items-center hover:text-slate-300 transition space-x-1 font-inter focus:outline-none"
               >
                 <span>{item.label}</span>
@@ -128,7 +114,10 @@ const Navbar = () => {
               </button>
 
               {openDropdown === item.label && item.dropdown && (
-                <div className="absolute top-full left-0 mt-2 min-w-[200px] bg-white text-gray-900 rounded-lg shadow-lg overflow-hidden z-50">
+                <div
+                  className="absolute top-full left-0 mt-2 min-w-[200px] bg-white text-gray-900 rounded-lg shadow-lg overflow-hidden z-50"
+                  onMouseLeave={() => setOpenDropdown(null)} // closes when mouse leaves
+                >
                   <div className="py-3 px-6 grid grid-cols-1 gap-2">
                     {item.dropdown.map((menu) => (
                       <Link
