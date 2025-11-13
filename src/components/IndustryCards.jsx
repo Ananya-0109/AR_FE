@@ -1,102 +1,178 @@
-import React from 'react';
+import React from "react";
+import { motion } from "framer-motion";
+
+// Logos
+import ajaxLogo from "../assets/ajax.png";
+import dyLogo from "../assets/dy.jpg";
+import imtLogo from "../assets/imt.png";
+import kscaLogo from "../assets/ksca.png";
+import promanLogo from "../assets/proman.png";
+import delkorLogo from "../assets/delkor.jpg";
+import rollwellLogo from "../assets/rollwell.jpg";
 
 const IndustryCards = () => {
-  const industries = [
+  const clients = [
     {
       id: 1,
-      name: "Construction",
-      description: "Structural steel, building components, and construction hardware for commercial and residential projects.",
-      icon: "fas fa-building",
-      projects: "500+",
-      specialties: ["Structural Steel", "Building Frames", "Construction Hardware", "Architectural Elements"]
+      name: "AJAX",
+      logo: ajaxLogo,
+      description:
+        "AJAX Engineering pioneers world-class concrete equipment — from batching plants to mixers — powering India’s infrastructure revolution.",
     },
     {
       id: 2,
-      name: "Manufacturing",
-      description: "Custom components and assemblies for manufacturing operations, machinery, and production equipment.",
-      icon: "fas fa-industry",
-      projects: "300+",
-      specialties: ["Machine Components", "Production Line Parts", "Custom Assemblies", "Precision Parts"]
+      name: "D.Y. Uppar & Sons",
+      logo: dyLogo,
+      description:
+        "A leader in heavy industrial fabrication and precision engineering, delivering reliable solutions for large-scale projects across India.",
     },
     {
       id: 3,
-      name: "Transportation",
-      description: "Heavy-duty components for trucks, trailers, rail systems, and transportation infrastructure.",
-      icon: "fas fa-truck",
-      projects: "250+",
-      specialties: ["Vehicle Components", "Trailer Parts", "Rail Systems", "Infrastructure"]
+      name: "IMT",
+      logo: imtLogo,
+      description:
+        "IMT is renowned globally for its advanced drilling and piling rigs — engineered for strength, precision, and lasting performance.",
     },
     {
       id: 4,
-      name: "Energy",
-      description: "Equipment and components for power generation, renewable energy, and utility infrastructure.",
-      icon: "fas fa-bolt",
-      projects: "150+",
-      specialties: ["Power Equipment", "Renewable Energy", "Utility Components", "Grid Infrastructure"]
+      name: "KSCA",
+      logo: kscaLogo,
+      description:
+        "The Karnataka State Cricket Association (KSCA) trusts our structural solutions for stadium excellence and architectural innovation.",
     },
     {
       id: 5,
-      name: "Agriculture",
-      description: "Farm equipment components, storage solutions, and agricultural machinery parts.",
-      icon: "fas fa-tractor",
-      projects: "200+",
-      specialties: ["Farm Equipment", "Storage Systems", "Machinery Parts", "Processing Equipment"]
+      name: "PROMAN",
+      logo: promanLogo,
+      description:
+        "PROMAN manufactures top-tier crushers and aggregate systems, driving productivity and efficiency across construction and mining sectors.",
     },
     {
       id: 6,
-      name: "Marine",
-      description: "Marine-grade fabrication for shipbuilding, offshore platforms, and maritime infrastructure.",
-      icon: "fas fa-ship",
-      projects: "100+",
-      specialties: ["Ship Components", "Offshore Structures", "Marine Hardware", "Port Equipment"]
-    }
+      name: "DELKOR",
+      logo: delkorLogo,
+      description:
+        "DELKOR delivers advanced conveying and transport systems, streamlining material flow across industrial operations worldwide.",
+    },
+    {
+      id: 7,
+      name: "ROLLWELL",
+      logo: rollwellLogo,
+      description:
+        "ROLLWELL designs next-generation conveyors and handling systems — setting benchmarks in durability and energy efficiency.",
+    },
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.08,
+        delayChildren: 0.1,
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.4,
+        ease: [0.25, 0.1, 0.25, 1],
+      },
+    },
+  };
+
   return (
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {industries.map((industry) => (
-        <div
-          key={industry.id}
-          className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer group"
+    <section
+      className="py-20 bg-gradient-to-b from-gray-50 via-white to-gray-100"
+      aria-label="Clients We Serve - Leading Industrial and Manufacturing Partners"
+    >
+      <div className="max-w-7xl mx-auto px-6 text-center">
+        {/* <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4"
         >
-          {/* Industry Header */}
-          <div className="text-center mb-6">
-            <div className="w-16 h-16 bg-blue-100 group-hover:bg-blue-200 rounded-full flex items-center justify-center mx-auto mb-4 transition-colors duration-300">
-              <i className={`${industry.icon} text-2xl text-blue-600 group-hover:text-blue-700 transition-colors duration-300`}></i>
-            </div>
-            <p className="text-xl font-bold text-gray-900 mb-2">{industry.name}</p>
-            <p className="text-gray-600 text-sm leading-relaxed">{industry.description}</p>
-          </div>
+          Clients We Proudly Serve
+        </motion.h2>
 
-          {/* Projects Count */}
-          <div className="text-center mb-6">
-            <div className="text-2xl font-bold text-blue-600 mb-1">{industry.projects}</div>
-            <div className="text-sm text-gray-500">Projects Completed</div>
-          </div>
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.1, duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-gray-600 mb-14 max-w-3xl mx-auto text-base md:text-lg"
+        >
+          We partner with industry leaders across manufacturing, construction,
+          and engineering sectors — delivering innovation, reliability, and
+          excellence through every project.
+        </motion.p> */}
 
-          {/* Specialties */}
-          <div className="mb-6">
-            <p className="text-sm font-semibold text-gray-900 mb-3">Our Specialties:</p>
-            <div className="flex flex-wrap gap-2">
-              {industry.specialties.map((specialty, index) => (
-                <span
-                  key={index}
-                  className="px-3 py-1 bg-gray-100 group-hover:bg-blue-100 text-gray-700 group-hover:text-blue-800 text-xs rounded-full transition-colors duration-300"
-                >
-                  {specialty}
-                </span>
-              ))}
-            </div>
-          </div>
+        {/* Cards Grid */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 md:gap-10 justify-center"
+        >
+          {clients.map((client) => (
+            <motion.div
+              key={client.id}
+              variants={cardVariants}
+              whileHover="hover"
+              className="relative bg-white p-8 rounded-2xl shadow-md border border-gray-100 
+                         hover:border-blue-200 transition-all duration-200 ease-out 
+                         flex flex-col items-center overflow-hidden"
+              style={{
+                willChange: "transform",
+                backfaceVisibility: "hidden",
+                transformStyle: "preserve-3d",
+              }}
+            >
+              {/* Hover background glow */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
 
-          {/* Learn More Button */}
-          <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors duration-200">
-            <i className="fas fa-arrow-right mr-2"></i>
-            Learn More
-          </button>
-        </div>
-      ))}
-    </div>
+              {/* Logo */}
+              <motion.div
+                whileHover={{ scale: 1.1, y: -2 }}
+                transition={{ type: "spring", stiffness: 220, damping: 15 }}
+              >
+                <img
+                  src={client.logo}
+                  alt={`${client.name} logo`}
+                  className="h-20 w-auto object-contain mb-5"
+                  loading="lazy"
+                />
+              </motion.div>
+
+              {/* Name */}
+              <p className="text-xl font-bold text-black mb-2 tracking-tight">
+                {client.name}
+              </p>
+
+              {/* Description */}
+              <p className="text-sm text-gray-700 leading-relaxed text-center font-medium max-w-xs">
+                {client.description}
+              </p>
+
+              {/* Underline animation */}
+              <motion.div
+                className="w-0 h-[2px] bg-blue-600 mt-5 rounded-full"
+                whileInView={{ width: 60 }}
+                transition={{ duration: 0.35 }}
+              />
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
   );
 };
 

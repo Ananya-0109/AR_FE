@@ -25,38 +25,42 @@ const Clients = () => {
       {/* Header Section */}
       <section className="relative py-32 flex flex-col items-center justify-center bg-gradient-to-r from-teal-900 to-slate-800 text-white text-center px-6 overflow-hidden">
         <div className="container mx-auto px-4 flex flex-col items-center text-center">
-          <p className="text-5xl font-extrabold mb-6 py-7">Our Clients & Industries</p>
+          <p className="text-5xl font-extrabold mb-6 py-1">Our Clients & Industries</p>
           <p className="text-xl max-w-3xl mx-auto">
-            We proudly serve leading companies across diverse industries, delivering quality solutions that drive success.
+            We proudly serve leading companies across diverse industries, delivering high-quality manufacturing solutions that empower business growth and long-term success.
           </p>
         </div>
       </section>
 
       {/* Industries Served */}
       <section id="industries" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="container mx-auto px-4 flex flex-col items-center text-center">
-            <p className="text-4xl text-blue-900 font-bold mb-6">Clients We Serve</p>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto py-5">
-              Our expertise spans multiple sectors, providing specialized solutions for each industry's unique requirements.
-            </p>
-          </div>
-          <IndustryCards />
-        </div>
-      </section>
+  <div className="container mx-auto px-4">
+    <div className="container mx-auto px-4 flex flex-col items-center text-center">
+      <p className="text-4xl text-blue-900 font-bold mb-3">Clients We Serve</p>
+      <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-10 leading-relaxed">
+        Our expertise spans multiple sectors, offering specialized industrial solutions tailored to meet each industry's unique requirements with precision and reliability.
+      </p>
+    </div>
+    <IndustryCards />
+  </div>
+</section>
 
-      {/* Client Logos */}
-      <section id="clients" className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4 py-5">
-          <div className="container mx-auto px-4 flex flex-col items-center text-center">
-            <p className="text-4xl text-blue-900 font-bold mb-6">Trusted by Industry Leaders</p>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We've built lasting partnerships with companies who value quality, reliability, and innovation.
-            </p>
-          </div>
-          <ClientGrid />
-        </div>
-      </section>
+
+    
+{/* Client Logos */}
+<section id="clients" className="py-20 bg-gray-50">
+  <div className="container mx-auto px-4 py-5">
+    <div className="container mx-auto px-4 flex flex-col items-center text-center">
+      <p className="text-4xl text-blue-900 font-bold mb-6">Industries We Cater To</p>
+      <p className="text-xl text-gray-600 max-w-3xl mx-auto py-4">
+        We’ve built strong partnerships with leading companies that trust our expertise in manufacturing, quality control, and innovation. Our clients rely on us for reliable, high-quality industrial solutions tailored to their needs.
+      </p>
+    </div>
+    <ClientGrid />
+  </div>
+</section>
+
+
 
       {/* Success Stories */}
       <section className="py-20 bg-white">
@@ -64,7 +68,7 @@ const Clients = () => {
           <div className="container mx-auto px-4 flex flex-col items-center text-center">
             <p className="text-4xl text-blue-900 font-bold mb-6">Success Stories</p>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Real projects, real results. See how we've helped our clients achieve their manufacturing goals.
+              Discover real-world manufacturing success stories and case studies showcasing how we help clients achieve their goals efficiently and effectively.
             </p>
           </div>
 
@@ -76,7 +80,7 @@ const Clients = () => {
                 <p className="text-xl text-blue-900 font-bold">Construction Sector</p>
               </div>
               <p className="text-gray-600 mb-4">
-                Delivered 2,000+ structural components for a major infrastructure project, completing 3 weeks ahead of schedule.
+                Delivered 2,000+ structural components for a major infrastructure project, maintaining strict quality standards and completing the project 3 weeks ahead of schedule.
               </p>
               <div className="flex items-center justify-between text-sm">
                 <span className="text-blue-600 font-semibold">Project Value: $2.5M</span>
@@ -90,7 +94,7 @@ const Clients = () => {
                 <p className="text-xl text-blue-900 font-bold">Manufacturing OEM</p>
               </div>
               <p className="text-gray-600 mb-4">
-                Developed custom production line components that increased client's manufacturing efficiency by 40%.
+                Developed custom production line components that enhanced manufacturing efficiency by 40%, boosting productivity and reducing operational downtime.
               </p>
               <div className="flex items-center justify-between text-sm">
                 <span className="text-green-600 font-semibold">Efficiency Gain: 40%</span>
@@ -104,7 +108,7 @@ const Clients = () => {
                 <p className="text-xl text-blue-900 font-bold">Transportation</p>
               </div>
               <p className="text-gray-600 mb-4">
-                Manufactured specialized vehicle components that reduced maintenance costs by 30% for a major fleet operator.
+                Manufactured specialized vehicle components that improved durability and reduced maintenance costs by 30% for a major logistics and fleet operator.
               </p>
               <div className="flex items-center justify-between text-sm">
                 <span className="text-amber-600 font-semibold">Cost Reduction: 30%</span>
@@ -121,7 +125,7 @@ const Clients = () => {
           <div className="container mx-auto px-4 flex flex-col items-center text-center">
             <p className="text-4xl text-blue-900 font-bold mb-6">What Our Clients Say</p>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Don't just take our word for it. Here's what our valued clients have to say about our services.
+              Hear genuine client testimonials about our professional approach, high-quality manufacturing, and customer-focused service excellence.
             </p>
           </div>
           <TestimonialSlider />

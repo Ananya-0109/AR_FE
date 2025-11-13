@@ -5,7 +5,6 @@ import ProductCard from "../components/ProductCard";
 import ProductFilter from "../components/ProductFilter";
 import { productsData } from "../assets/data/productsData";
 
-
 const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [filteredProducts, setFilteredProducts] = useState(productsData);
@@ -60,14 +59,11 @@ const Products = () => {
       <section className="relative py-32 flex flex-col items-center justify-center bg-gradient-to-r from-teal-900 to-slate-800 text-white text-center px-6 overflow-hidden">
         <div className="absolute inset-0 bg-[url('/assets/pattern.svg')] opacity-10"></div>
         <div className="container mx-auto px-4 relative text-center flex flex-col items-center ">
-          <span className="uppercase tracking-wide text-sm text-blue-200 ">
-            
-          </span>
           <p className="text-5xl font-extrabold mb-6">
             Products & Components
           </p>
           <p className="text-lg max-w-3xl mx-auto opacity-90">
-            Gallery showcasing bin frames, CRBs, rake arms, and more.
+            Explore our diverse range of products including bin frames, CRBs, and rake arms, designed for industrial-grade performance and reliability.
           </p>
         </div>
       </section>
@@ -119,7 +115,7 @@ const Products = () => {
                 No Products Found
               </h3>
               <p className="text-gray-500">
-                Try selecting a different category or check back later.
+                Try selecting a different category or check back later for updates to our industrial product range.
               </p>
             </div>
           )}
@@ -132,8 +128,7 @@ const Products = () => {
           <div className="text-center mb-16 flex flex-col items-center ">
             <p className="text-4xl font-extrabold text-black mb-6">Why Choose Our Products?</p>
             <p className="text-xl !text-gray-800 max-w-3xl mx-auto">
-              Every component we manufacture meets the highest standards of
-              quality, durability, and precision.
+              Every product is crafted with exceptional precision, premium materials, and quality assurance to ensure long-lasting industrial performance.
             </p>
           </div>
 
@@ -142,25 +137,25 @@ const Products = () => {
               {
                 icon: FaMedal,
                 title: "Premium Quality",
-                desc: "Made from high-grade materials with strict quality control.",
+                desc: "Made from high-grade materials with strict quality control for durability and reliability.",
                 color: "text-blue-600",
               },
               {
                 icon: FaCogs,
                 title: "Precision Engineering",
-                desc: "CNC machined with tolerances up to ±0.001 inches.",
+                desc: "CNC machined with extremely fine tolerances up to ±0.001 inches for perfect fit and finish.",
                 color: "text-green-600",
               },
               {
                 icon: FaShippingFast,
                 title: "Fast Delivery",
-                desc: "Quick turnaround with reliable nationwide shipping.",
+                desc: "Swift production and nationwide delivery ensuring your projects stay on schedule.",
                 color: "text-amber-600",
               },
               {
                 icon: FaTools,
                 title: "Custom Solutions",
-                desc: "Tailored designs to meet your exact specifications.",
+                desc: "Tailored fabrication services designed to match your unique industrial requirements.",
                 color: "text-purple-600",
               },
             ].map((feature, idx) => (
@@ -184,69 +179,67 @@ const Products = () => {
 
       {/* Technical Specifications */}
       <section className="py-20 bg-gray-100">
-  <div className="container mx-auto px-4 flex flex-col items-center text-center">
-    <div className="text-center mb-16">
-      <p className="text-3xl font-extrabold mb-6 text-black">
-        Technical Specifications
-      </p>
-      <p className="text-xl !text-gray-600 max-w-3xl mx-auto">
-        Our products are manufactured to meet customer expectations
-        and specifications.
-      </p>
-    </div>
+        <div className="container mx-auto px-4 flex flex-col items-center text-center">
+          <div className="text-center mb-16">
+            <p className="text-3xl font-extrabold mb-6 text-black">
+              Technical Specifications
+            </p>
+            <p className="text-xl !text-gray-600 max-w-3xl mx-auto">
+              Our industrial components are manufactured to meet stringent dimensional, material, and performance standards for maximum efficiency.
+            </p>
+          </div>
 
-    <div className="grid md:grid-cols-2 text-blue-900 lg:grid-cols-3 gap-8">
-      {[
-        {
-          icon: "fas fa-ruler text-blue-600 ",
-          title: "Dimensional Accuracy",
-          items: [
-            'Linear dimensions: ±0.005"',
-            "Angular dimensions: ±0.5°",
-            "Surface finish: 32-125 RMS",
-            'Flatness: 0.002" per inch',
-          ],
-        },
-        {
-          icon: "fas fa-weight-hanging text-green-600",
-          title: "Material Properties",
-          items: [
-            "Steel grades: A36, A572, A588",
-            "Aluminum alloys: 6061-T6, 5052",
-            "Stainless steel: 304, 316, 410",
-            "Custom alloys available",
-          ],
-        },
-        {
-          icon: "fas fa-shield-alt text-amber-600",
-          title: "Testing & Certification",
-          items: [
-            "Material test certificates",
-            "Dimensional inspection reports",
-            "Non-destructive testing",
-            "Third-party verification",
-          ],
-        },
-      ].map((spec, idx) => (
-        <div
-          key={idx}
-          className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition"
-        >
-          <p className="text-xl font-bold mb-4 flex items-center">
-            <i className={`${spec.icon} mr-3`}></i>
-            {spec.title}
-          </p>
-          <ul className="space-y-2 text-gray-600 text-left text-justify pl-2">
-            {spec.items.map((item, i) => (
-              <li key={i}>• {item}</li>
+          <div className="grid md:grid-cols-2 text-blue-900 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: "fas fa-ruler text-blue-600 ",
+                title: "Dimensional Accuracy",
+                items: [
+                  'Linear dimensions: ±0.005"',
+                  "Angular dimensions: ±0.5°",
+                  "Surface finish: 32-125 RMS",
+                  'Flatness: 0.002" per inch',
+                ],
+              },
+              {
+                icon: "fas fa-weight-hanging text-green-600",
+                title: "Material Properties",
+                items: [
+                  "Steel grades: A36, A572, A588",
+                  "Aluminum alloys: 6061-T6, 5052",
+                  "Stainless steel: 304, 316, 410",
+                  "Custom alloys available",
+                ],
+              },
+              {
+                icon: "fas fa-shield-alt text-amber-600",
+                title: "Testing & Certification",
+                items: [
+                  "Material test certificates",
+                  "Dimensional inspection reports",
+                  "Non-destructive testing",
+                  "Third-party verification",
+                ],
+              },
+            ].map((spec, idx) => (
+              <div
+                key={idx}
+                className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition"
+              >
+                <p className="text-xl font-bold mb-4 flex items-center">
+                  <i className={`${spec.icon} mr-3`}></i>
+                  {spec.title}
+                </p>
+                <ul className="space-y-2 text-gray-600 text-left text-justify pl-2">
+                  {spec.items.map((item, i) => (
+                    <li key={i}>• {item}</li>
+                  ))}
+                </ul>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
-
+      </section>
 
       {/* CTA Section */}
       <section className="relative py-24 bg-gradient-to-r from-gray-800 to-gray-900 text-white text-center">
@@ -256,7 +249,7 @@ const Products = () => {
             Need Fabrication Solution?
           </h2>
           <p className="text-xl mb-8 max-w-2xl text-center py-4">
-            Can't find what you're looking for? Our engineering team can  manufacture components tailored to your needs.
+            Can’t find what you’re looking for? Our engineering experts design and manufacture custom-built components for all industrial needs.
           </p>
           <div className="flex gap-6 justify-center mt-6">
             <a
@@ -273,13 +266,6 @@ const Products = () => {
               <i className="fas fa-phone mr-2"></i>
               Call Engineering
             </a>
-            {/* <a
-              href="/brochure.pdf"
-              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:bg-white hover:text-gray-900"
-            >
-              <i className="fas fa-file-pdf mr-2"></i>
-              Download Brochure
-            </a> */}
           </div>
         </div>
       </section>

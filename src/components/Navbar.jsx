@@ -67,13 +67,12 @@ const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Smooth scroll with offset
   useEffect(() => {
     const hash = location.hash;
     if (hash) {
       const element = document.querySelector(hash);
       if (element) {
-        const yOffset = -80; // adjust based on navbar height
+        const yOffset = -80;
         const y =
           element.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: "smooth" });
@@ -88,16 +87,16 @@ const Navbar = () => {
 
   return (
     <nav className="fixed w-full top-0 z-50 bg-[#232f3e] text-white shadow-xl font-inter">
-      <div className="container mx-auto px-8 flex justify-between items-center h-20">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 flex flex-wrap justify-between items-center h-auto md:h-20 py-3 md:py-0">
         {/* Logo */}
-        <Link to="/" className="flex items-center space-x-3">
+        <Link to="/" className="flex items-center space-x-3 mb-2 md:mb-0">
           <img src="/ar-logo.png" alt="AR Industries Logo" className="h-10" />
         </Link>
 
         {/* Nav Items */}
-        <div className="flex items-center space-x-12 text-base font-medium">
+        <div className="flex flex-wrap justify-center md:justify-end items-center gap-4 md:space-x-8 text-sm md:text-base font-medium w-full md:w-auto">
           {NAV_ITEMS.map((item) => (
-            <div key={item.label} className="relative navbar-item">
+            <div key={item.label} className="relative">
               <button
                 onClick={() => handleDropdownClick(item.label, item.to)}
                 className="flex items-center hover:text-slate-300 transition space-x-1 font-inter focus:outline-none"
@@ -106,7 +105,7 @@ const Navbar = () => {
                 {item.dropdown && (
                   <FaAngleDown
                     className={
-                      "ml-2 transition" +
+                      "ml-1 transition" +
                       (openDropdown === item.label ? " rotate-180" : "")
                     }
                   />
@@ -115,16 +114,16 @@ const Navbar = () => {
 
               {openDropdown === item.label && item.dropdown && (
                 <div
-                  className="absolute top-full left-0 mt-2 min-w-[200px] bg-white text-gray-900 rounded-lg shadow-lg overflow-hidden z-50"
-                  onMouseLeave={() => setOpenDropdown(null)} // closes when mouse leaves
+                  className="absolute top-full left-0 mt-2 min-w-[180px] bg-white text-gray-900 rounded-lg shadow-lg overflow-hidden z-50"
+                  onMouseLeave={() => setOpenDropdown(null)}
                 >
-                  <div className="py-3 px-6 grid grid-cols-1 gap-2">
+                  <div className="py-3 px-4 grid grid-cols-1 gap-1">
                     {item.dropdown.map((menu) => (
                       <Link
                         key={menu.label}
                         to={menu.to}
                         onClick={() => setOpenDropdown(null)}
-                        className="block py-2 hover:bg-gray-100 rounded font-inter"
+                        className="block py-2 px-2 hover:bg-gray-100 rounded font-inter"
                       >
                         {menu.label}
                       </Link>
@@ -137,10 +136,10 @@ const Navbar = () => {
         </div>
 
         {/* Contact Button */}
-        <div>
+        <div className="mt-3 md:mt-0 w-full md:w-auto flex justify-center md:justify-end">
           <Link
             to="/contact"
-            className="flex items-center space-x-2 border-2 border-white text-white py-2 px-6 rounded-lg text-base font-semibold hover:bg-white hover:text-[#232f3e] transition-all duration-300 font-inter"
+            className="flex items-center space-x-2 border-2 border-white text-white py-2 px-6 rounded-lg text-sm md:text-base font-semibold hover:bg-white hover:text-[#232f3e] transition-all duration-300 font-inter"
           >
             <span>Contact Us</span>
             <FaArrowRight />

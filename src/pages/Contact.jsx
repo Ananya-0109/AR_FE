@@ -30,10 +30,10 @@ const Contact = () => {
       <section className="relative py-32 flex flex-col items-center justify-center bg-gradient-to-r from-teal-900 to-slate-800 text-white text-center px-6 overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative z-10 max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-4 tracking-tight">
+          <p className="text-3xl md:text-4xl font-extrabold mb-4 tracking-tight py-8">
             Get in Touch
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-200 leading-relaxed">
+          </p>
+          <p className="text-lg text-gray-200 leading-relaxed px-10 ">
             We're here to help you with your industrial fabrication needs.
           </p>
         </div>

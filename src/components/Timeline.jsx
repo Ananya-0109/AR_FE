@@ -64,7 +64,7 @@ const Timeline = () => {
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-6 !text-blue-900 py-6">Our Journey Through Time</h2>
+          <p className="text-3xl font-bold mb-4 !text-blue-900 py-2">Our Journey Through Time</p>
           <p className="text-lg md:text-xl text-black leading-relaxed">
             From humble beginnings to industry leadership - discover the milestones that shaped our company.
           </p>

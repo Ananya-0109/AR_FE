@@ -19,7 +19,7 @@ const AboutUs = () => {
             About Us
           </p>
           <p className="text-lg text-gray-200 leading-relaxed px-10">
-            With a team of professionals we have excelled in fabrication in short span of time and established ourselves as we go for special fabrication components and custom solutions.
+            With a team of skilled professionals, we have excelled in fabrication within a short span of time and established ourselves as specialists in custom fabrication components and tailored solutions.
           </p>
         </motion.div>
       </section>
@@ -78,7 +78,7 @@ const AboutUs = () => {
       Our Vision & Mission
     </h2>
     <p className="text-xl text-black max-w-3xl text-center">
-      Commited to quality, delivery and custom satisfaction.
+      Commited to quality, delivery and customer satisfaction.
     </p>
   </div>
 

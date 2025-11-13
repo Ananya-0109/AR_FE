@@ -6,8 +6,8 @@ const Certifications = () => {
       {/* Header */}
       <section className="relative py-40 flex flex-col items-center justify-center text-white text-center px-6 overflow-hidden bg-gradient-to-r from-teal-900 to-slate-800">
         <div className="container mx-auto px-4 flex flex-col items-center text-center">
-          <p className="text-5xl font-extrabold mb-6 py-7">Certifications</p>
-          <p className="text-lg text-gray-200 leading-relaxed px-10">
+          <p className="text-5xl font-extrabold mb-6 py-2">Certifications</p>
+          <p className="text-lg text-gray-200 leading-relaxed px-4">
             Our certifications reflect our commitment to quality, safety, and
             compliance with international standards.
           </p>
@@ -21,13 +21,13 @@ const Certifications = () => {
             <p className="text-3xl font-bold text-blue-900 mb-4">
               ISO Certification
             </p>
-            <p className="text-gray-700 mb-4">
+            <p className="text-black mb-4">
               We are ISO 9001:2015 certified, ensuring our quality management
               system meets global standards. This certification highlights our
               focus on customer satisfaction, process improvement, and
               efficiency.
             </p>
-            <ul className="list-disc list-inside text-gray-700">
+            <ul className="list-disc list-inside text-black">
               <li>Standardized processes</li>
               <li>Continuous improvement</li>
               <li>Customer satisfaction</li>
