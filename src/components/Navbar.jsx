@@ -86,12 +86,14 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed w-full top-0 z-50 bg-[#232f3e] text-white shadow-xl font-inter">
+    <nav className="fixed w-full top-0 z-50 bg-white text-black shadow-xl font-inter">
       <div className="container mx-auto px-4 sm:px-6 md:px-8 flex flex-wrap justify-between items-center h-auto md:h-20 py-3 md:py-0">
+
         {/* Logo */}
-        <Link to="/" className="flex items-center space-x-3 mb-2 md:mb-0">
-          <img src="/ar-logo.png" alt="AR Industries Logo" className="h-10" />
-        </Link>
+       <Link to="/" className="flex items-center space-x-3 mb-4 md:mb-0">
+  <img src="/AR logo.png" alt="AR Industries Logo" className="h-12 md:h-14" />
+</Link>
+
 
         {/* Nav Items */}
         <div className="flex flex-wrap justify-center md:justify-end items-center gap-4 md:space-x-8 text-sm md:text-base font-medium w-full md:w-auto">
@@ -99,7 +101,7 @@ const Navbar = () => {
             <div key={item.label} className="relative">
               <button
                 onClick={() => handleDropdownClick(item.label, item.to)}
-                className="flex items-center hover:text-slate-300 transition space-x-1 font-inter focus:outline-none"
+                className="flex items-center hover:text-[#3A3A8C] transition space-x-1 font-inter focus:outline-none"
               >
                 <span>{item.label}</span>
                 {item.dropdown && (
@@ -114,7 +116,7 @@ const Navbar = () => {
 
               {openDropdown === item.label && item.dropdown && (
                 <div
-                  className="absolute top-full left-0 mt-2 min-w-[180px] bg-white text-gray-900 rounded-lg shadow-lg overflow-hidden z-50"
+                  className="absolute top-full left-0 mt-2 min-w-[180px] bg-white text-[#222222] rounded-lg shadow-lg overflow-hidden z-50"
                   onMouseLeave={() => setOpenDropdown(null)}
                 >
                   <div className="py-3 px-4 grid grid-cols-1 gap-1">
@@ -123,7 +125,7 @@ const Navbar = () => {
                         key={menu.label}
                         to={menu.to}
                         onClick={() => setOpenDropdown(null)}
-                        className="block py-2 px-2 hover:bg-gray-100 rounded font-inter"
+                        className="block py-2 px-2 hover:bg-[#F3F4F6] hover:text-[#3A3A8C] rounded font-inter"
                       >
                         {menu.label}
                       </Link>
@@ -137,14 +139,21 @@ const Navbar = () => {
 
         {/* Contact Button */}
         <div className="mt-3 md:mt-0 w-full md:w-auto flex justify-center md:justify-end">
-          <Link
-            to="/contact"
-            className="flex items-center space-x-2 border-2 border-white text-white py-2 px-6 rounded-lg text-sm md:text-base font-semibold hover:bg-white hover:text-[#232f3e] transition-all duration-300 font-inter"
-          >
-            <span>Contact Us</span>
-            <FaArrowRight />
-          </Link>
-        </div>
+  <Link
+    to="/contact"
+    className="flex items-center space-x-2 
+               border-2 border-black 
+               text-black 
+               py-2 px-6 rounded-lg 
+               text-sm md:text-base font-semibold 
+               hover:bg-gray-200 hover:text-black
+               transition-all duration-300 font-inter"
+  >
+    <span>Contact Us</span>
+    <FaArrowRight className="text-black" />
+  </Link>
+</div>
+
       </div>
     </nav>
   );
